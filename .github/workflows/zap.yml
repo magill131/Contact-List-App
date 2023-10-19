@@ -6,7 +6,7 @@ jobs:
     name: website scan
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - run: sudo apt-get update && sudo apt-get install -y nginx && sudo systemctl start nginx
       - name: ZAP Scan
         uses: ./
