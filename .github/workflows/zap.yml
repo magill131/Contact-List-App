@@ -1,4 +1,4 @@
-name: Final Project
+name: Zap Scan
 on: push
 jobs:
   zap_scan:
@@ -6,8 +6,10 @@ jobs:
     name: website scan
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.9.0
         with:
-          target: 'https://thinking-tester-contact-list.herokuapp.com'
+          target: https://thinking-tester-contact-list.herokuapp.com
+          rules_file_name: '.zap/rules.tsv'
+          cmd_options: '-a'
