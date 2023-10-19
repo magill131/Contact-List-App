@@ -6,7 +6,7 @@ describe("Verify Sign Up", () => {
     it("should fill out the form", () => {
         cy.get("#firstName").type("Travis");
         cy.get("#lastName").type("Buchanon");
-        cy.get("#email").type("Tbuch12@gmail.com");
+        cy.get("#email").type("Tbuch12345@gmail.com");
         cy.get("#password").type("Tbarto12%");
     
         cy.get("#submit").click();
