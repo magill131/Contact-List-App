@@ -7,9 +7,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - run: sudo apt-get update && sudo apt-get install -y nginx && sudo systemctl start nginx
       - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.9.0
+        uses: ./
+        id: action-baseline
         with:
-          target: 'https://thinking-tester-contact-list.herokuapp.com'
-          rules_file_name: '.zap/rules.tsv'
-          cmd_options: '-a'
+          target: 'https://thinking-tester-contact-list.herokuapp.com/'
+          allow_issue_writing: false
