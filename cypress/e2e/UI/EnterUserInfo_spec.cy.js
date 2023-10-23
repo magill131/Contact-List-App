@@ -1,6 +1,6 @@
 const uuid = () => Cypress._.random(0, 1e6)
 const id = uuid()
-describe("Verify Sign Up", () => {
+describe("Enter user info", () => {
     beforeEach(() => {
       cy.visit("https://thinking-tester-contact-list.herokuapp.com");
       cy.get("#signup").click();

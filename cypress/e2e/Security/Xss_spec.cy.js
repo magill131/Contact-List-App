@@ -1,4 +1,4 @@
-describe("Verify Sign Up", () => {
+describe("Make sure XSS Script input is not accepted", () => {
     beforeEach(() => {
       cy.visit("https://thinking-tester-contact-list.herokuapp.com");
       cy.get("#signup").click();

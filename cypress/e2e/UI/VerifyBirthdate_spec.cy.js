@@ -1,4 +1,4 @@
-describe("Website form login bad password user - ", () => {
+describe("Verify birthdate - ", () => {
     beforeEach(() => {
       cy.visit("https://thinking-tester-contact-list.herokuapp.com");
       cy.get("#email").type("magill131@gmail.com");

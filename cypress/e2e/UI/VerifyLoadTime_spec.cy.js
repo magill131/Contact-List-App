@@ -1,4 +1,4 @@
-describe("Login", () => {
+describe("Verify load time", () => {
     beforeEach(() => {
       cy.visit("https://thinking-tester-contact-list.herokuapp.com");
     });

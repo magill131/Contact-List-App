@@ -1,4 +1,4 @@
-describe("Verify Sign Up", () => {
+describe("Ensure password length has requirements", () => {
   beforeEach(() => {
     cy.visit("https://thinking-tester-contact-list.herokuapp.com");
     cy.get("#signup").click();
